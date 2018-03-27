@@ -1,0 +1,23 @@
+{
+  "name": "client",
+  "version": "0.0.0",
+  "description": "client side of the sports app",
+  "main": "index.html",
+  "scripts": {
+    "start": "run-p server:run scss:watch",
+    "server:run": "live-server",
+    "scss:watch": "sass --watch src/scss/main.scss:public/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "eslint": "^4.19.1",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.8.3",
+    "npm-run-all": "^4.1.2",
+    "onchange": "^3.3.0",
+    "postcss-cli": "^5.0.0",
+    "uglify-js": "^3.3.16"
+  }
+}

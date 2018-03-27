@@ -1,0 +1,1 @@
+- make proper head tag with meta etc
