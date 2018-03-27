@@ -4,9 +4,11 @@
   "description": "client side of the sports app",
   "main": "index.html",
   "scripts": {
-    "start": "run-p server:run scss:watch",
+    "start": "run-p server:run scss:watch js:watch",
     "server:run": "live-server",
-    "scss:watch": "sass --watch src/scss/main.scss:public/style.css"
+    "scss:watch": "sass --watch src/scss/main.scss:public/style.css",
+    "js:bundle": "rollup src/js/app.js -o public/bundle.js -f iife",
+    "js:watch": "onchange src/js/*.js -- npm run js:bundle"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "npm-run-all": "^4.1.2",
     "onchange": "^3.3.0",
     "postcss-cli": "^5.0.0",
+    "rollup": "^0.57.1",
     "uglify-js": "^3.3.16"
   }
 }

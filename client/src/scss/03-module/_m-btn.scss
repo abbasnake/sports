@@ -1,0 +1,11 @@
+.m-btn {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto;
+  min-width: 100px;
+  width: 50%;
+}
+
+.m-btn-registry, .m-btn-todo, .m-btn-rr {
+  @extend .m-btn;
+}
