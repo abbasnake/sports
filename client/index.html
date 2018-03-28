@@ -13,9 +13,9 @@
       <h1 class="m-title">Sports</h1>
       <nav class="m-navbar">
         <div class="l-navbar">
-          <button class="m-btn btn-1-js">REGISTRY</button>
-          <button class="m-btn btn-2-js">TO DO</button>
-          <button class="m-btn btn-3-js">RR</button>
+          <button class="m-btn js-btn js-btn-1">REGISTRY</button>
+          <button class="m-btn js-btn js-btn-2">TO DO</button>
+          <button class="m-btn js-btn js-btn-3">RR</button>
         </div>
       </nav>
     </header>
@@ -23,14 +23,36 @@
     <!--/////////////////////////////////////////////// MAIN -->
     <main class="main">
       <div class="l-main">
-        <section class="m-page page-1-js is-hidden">
+        <section class="m-page js-page page-1-js">
           <h2 class="m-title">Registry</h2>
+          <div class="l-table-registry registry-js">
+            <div class="l-column">
+              <h3>Date</h3>
+              <ul class="js-date"></ul>
+            </div>
+            <div class="l-column">
+              <h3>A</h3>
+              <ul class="js-A-score"></ul>
+            </div>
+            <div class="l-column">
+              <h3>R</h3>
+              <ul class="js-R-score"></ul>
+            </div>
+            <div class="l-column">
+              <h3>A Comment</h3>
+              <ul class="js-A-comments"></ul>
+            </div>
+            <div class="l-column">
+              <h3>R Comment</h3>
+              <ul class="js-R-comments"></ul>
+            </div>
+          </div>
         </section>
 
-        <section class="m-page page-2-js">
+        <section class="m-page js-page page-2-js is-hidden">
           <h2 class="m-title">To do</h2>
-          <div class="l-todo">
-            <div class="l-table">
+          <div class="l-table-todo">
+            <div class="l-column">
               <h3>Exercise</h3>
               <ul>
                 <li>Muscle-Up</li>
@@ -46,7 +68,7 @@
                 <li>42KM</li>
               </ul>
             </div>
-            <div class="l-table">
+            <div class="l-column">
               <h3>A</h3>
               <ul>
                 <li>-</li>
@@ -62,7 +84,7 @@
                 <li>-</li>
               </ul>
             </div>
-            <div class="l-table">
+            <div class="l-column">
               <h3>R</h3>
               <ul>
                 <li>-</li>
@@ -78,7 +100,7 @@
                 <li>-</li>
               </ul>
             </div>
-            <div class="l-table">
+            <div class="l-column">
               <h3>Comments</h3>
               <ul>
                 <li>-</li>
@@ -97,7 +119,7 @@
           </div>
         </section>
 
-        <section class="m-page page-3-js is-hidden">
+        <section class="m-page js-page page-3-js is-hidden">
          <h2 class="m-title">RR</h2>
        </section>
      </div>
