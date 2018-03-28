@@ -5,6 +5,9 @@
 a {
   text-decoration: none; }
 
+li {
+  list-style-type: none; }
+
 h1, h2, h3, h4, h5, h6 {
   padding: 15px; }
 
@@ -33,6 +36,10 @@ h1, h2, h3, h4, h5, h6 {
 .l-main {
   display: grid;
   height: 100%; }
+
+.l-todo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
 
 .m-title {
   text-align: center; }
