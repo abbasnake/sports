@@ -7,6 +7,7 @@ const runRegistry = () => {
 
   const makeLi = (data, parent) => {
     const li = $$$('li')
+    li.classList.add('m-li') // adding SMACSS classes
     li.textContent = data
     parent.appendChild(li)
   }

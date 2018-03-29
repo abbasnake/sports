@@ -31,12 +31,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .l-navbar {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-gap: 10px; }
 
 .l-main {
   display: grid;
   height: 100%; }
+
+.l-table-registry {
+  max-height: 65vh;
+  overflow-y: scroll; }
 
 .l-table-todo {
   display: grid;
@@ -65,6 +68,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .m-table-list {
   border-bottom: 1px solid grey; }
+
+.m-li {
+  display: grid;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  align-content: center; }
 
 .is-hidden {
   display: none; }
