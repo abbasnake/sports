@@ -2,3 +2,4 @@
 - overflow setting for registry section
 - score sum at the end of each month
 - registry cells do't align if one is bigger
+- maybe naming SMACSS modules m-<tag name> (like m-li, l-li, m-header, m-ul) not such a good idea

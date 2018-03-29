@@ -16,7 +16,7 @@ const runRegistry = () => {
     for (let i = 0; i < db.schedule.length; i++) { // loop through db
       
       const ul = $$$('ul') // create ul to place data li's in
-      ul.classList.add('l-table-list', 'm-table-list', 's-table-list') // adding SMACSS classes
+      ul.classList.add('l-ul', 'm-table-list', 's-table-list') // adding SMACSS classes
 
       makeLi(db.schedule[i].date, ul) //add li's with data to ul
       makeLi(db.schedule[i].score.A, ul)

@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(4, 1fr); }
 
-.l-table-list {
+.l-ul {
   display: grid;
   grid-template-columns: minmax(80px, 2fr) minmax(20px, 1fr) minmax(20px, 1fr) 4fr 4fr; }
 
