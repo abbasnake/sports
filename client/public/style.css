@@ -63,8 +63,14 @@ h1, h2, h3, h4, h5, h6 {
 .m-main {
   background-color: #dedede; }
 
+.m-table-list {
+  border-bottom: 1px solid grey; }
+
 .is-hidden {
   display: none; }
+
+.m-table-list:hover {
+  border: 2px solid red; }
 
 body {
   background-color: #a6a6a6; }
