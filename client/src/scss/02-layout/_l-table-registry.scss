@@ -1,4 +1,6 @@
 .l-table-registry {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  // display: grid;
+  // grid-template-columns: repeat(5, auto);
+  // max-height: 60vh;
+  // overflow-y: scroll;
 }

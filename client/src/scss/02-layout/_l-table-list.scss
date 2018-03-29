@@ -1,0 +1,4 @@
+.l-table-list {
+  display: grid;
+  grid-template-columns: minmax(80px, 2fr) minmax(20px, 1fr) minmax(20px, 1fr) 4fr 4fr;
+}

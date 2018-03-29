@@ -597,11 +597,11 @@ let db = {
   {
     "date": "27.03.2018",
     "score": {
-      "A": 0,
+      "A": 1,
       "R": 0
     },
     "comments": {
-      "A": "-",
+      "A": "kaut kāda huiņa HIIT",
       "R": "-"
     }
   },

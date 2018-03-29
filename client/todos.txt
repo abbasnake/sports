@@ -1,3 +1,4 @@
 - make proper head tag with meta etc
 - overflow setting for registry section
 - score sum at the end of each month
+- registry cells do't align if one is bigger
