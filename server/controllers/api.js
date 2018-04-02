@@ -3,7 +3,7 @@ const router   = express.Router()
 const Registry = require('../models/db.js')
 
 router.get('/api/registry', (req, res) => { // GET ROUTE
-    Registry.find({}, (err, data) => { // get all todos
+    Registry.find({}).sort({date: 'ascending'}).exec((err, data) => { // get all todos
         err ? console.log(err) : res.send({data})
    })
 })

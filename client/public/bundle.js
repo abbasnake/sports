@@ -45,7 +45,9 @@
         const ul = $$$('ul');
         ul.classList.add('l-ul', 'm-table-list', 's-table-list'); // adding SMACSS classes
 
-        liTemplate(data[i].date, ul);
+        const slicedDate = data[i].date.slice(0, 10); // to just see the year-month-day
+
+        liTemplate(slicedDate, ul);
         liTemplate(data[i].score.A, ul);
         liTemplate(data[i].score.R, ul);
         liTemplate(data[i].comments.A, ul);

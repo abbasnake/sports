@@ -3,17 +3,7 @@ const path             = require('path')              // path module
 const bodyParser       = require('body-parser')       // for json parsing                
 const expressSanitizer = require('express-sanitizer') // defense against injections 
 
-// const Registry = require('./models/db.js')
-
-// Registry.create({
-//   date: new Date('2010-01-01'),
-//   score: {
-//     R: 20
-//   },
-//   comments: {
-//     A: 'esmu mīkstais'
-//   }
-// })
+// require('./oldData.js')
 
 const port = process.env.PORT || 3000 // set port
 const app  = express();               // initialize express app
