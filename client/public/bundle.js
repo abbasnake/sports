@@ -30,36 +30,44 @@
     }
   };
 
-  const template = (data, parent) => {
+  const registry = (dbData) => {
 
-    const li = $$$('li');
-    li.classList.add('m-li'); // adding SMACSS classes
-    li.textContent = data;
-    parent.appendChild(li); //add ul to container
+    const liTemplate = (data, parent) => {
+      const li = $$$('li');
+      li.classList.add('m-li'); // adding SMACSS classes
+      li.textContent = data;
+      parent.appendChild(li);
+    };
+
+    const insertDataToDOM = (data) => {
+      const container = $('.js-registry');
+      for (let i = 0; i < data.length; i++) {
+        const ul = $$$('ul');
+        ul.classList.add('l-ul', 'm-table-list', 's-table-list'); // adding SMACSS classes
+
+        liTemplate(data[i].date, ul);
+        liTemplate(data[i].score.A, ul);
+        liTemplate(data[i].score.R, ul);
+        liTemplate(data[i].comments.A, ul);
+        liTemplate(data[i].comments.R, ul);
+
+        container.appendChild(ul);
+      }
+    };
+
+    insertDataToDOM(dbData);
   };
 
-  const fetchRegistry = () => { // GET TODOS function
+  const fetchAndInsertRegistry = () => { // GET TODOS function
       fetch('api/registry')             // FetchAPI GET
       .then(res => res.json())
-      .then(registry => {
-        const container = $('.js-registry');
-        for (let i = 0; i < registry.data.length; i++) {
-          const ul = $$$('ul');
-          ul.classList.add('l-ul', 'm-table-list', 's-table-list'); // adding SMACSS classes
-
-          template(registry.data[i].date, ul);
-          template(registry.data[i].score.A, ul);
-          template(registry.data[i].comments.A, ul);
-          template(registry.data[i].score.R, ul);
-          template(registry.data[i].comments.R, ul);
-
-          container.appendChild(ul);
-        }
+      .then(db => {
+        registry(db.data); // wrap data in necessary tags and insert to DOM
       });
     };
 
   runNavbar();
-  fetchRegistry();
+  fetchAndInsertRegistry();
   // runRegistry()
 
 }());

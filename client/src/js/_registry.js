@@ -1,34 +1,32 @@
 import { $, $$, $$$ } from './_helpers.js'
-import { db }         from './_db.js'
 
-const runRegistry = () => {
 
-  const container = $('.js-registry')
+const registry = (dbData) => {
 
-  const makeLi = (data, parent) => {
+  const liTemplate = (data, parent) => {
     const li = $$$('li')
     li.classList.add('m-li') // adding SMACSS classes
     li.textContent = data
     parent.appendChild(li)
   }
 
-  const insertData = () => {
-    for (let i = 0; i < db.schedule.length; i++) { // loop through db
-      
-      const ul = $$$('ul') // create ul to place data li's in
+  const insertDataToDOM = (data) => {
+    const container = $('.js-registry')
+    for (let i = 0; i < data.length; i++) {
+      const ul = $$$('ul')
       ul.classList.add('l-ul', 'm-table-list', 's-table-list') // adding SMACSS classes
 
-      makeLi(db.schedule[i].date, ul) //add li's with data to ul
-      makeLi(db.schedule[i].score.A, ul)
-      makeLi(db.schedule[i].score.R, ul)
-      makeLi(db.schedule[i].comments.A, ul)
-      makeLi(db.schedule[i].comments.R, ul)
+      liTemplate(data[i].date, ul)
+      liTemplate(data[i].score.A, ul)
+      liTemplate(data[i].score.R, ul)
+      liTemplate(data[i].comments.A, ul)
+      liTemplate(data[i].comments.R, ul)
 
-      container.appendChild(ul) //add ul to container
+      container.appendChild(ul)
     }
   }
 
-  insertData()
+  insertDataToDOM(dbData)
 }
 
-export { runRegistry }
+export { registry }
