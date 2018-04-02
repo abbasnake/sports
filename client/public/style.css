@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 a {
   text-decoration: none; }
@@ -38,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%; }
 
 .l-table-registry {
-  max-height: 65vh;
+  max-height: 60vh;
   overflow-y: scroll; }
 
 .l-table-todo {
