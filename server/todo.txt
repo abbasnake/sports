@@ -1,0 +1,1 @@
+- nodemon buging out when multiple directories to watch are set
