@@ -85,6 +85,10 @@ h1, h2, h3, h4, h5, h6 {
 .s-li:hover {
   border-top: 2px solid red; }
 
+.is-editable {
+  background-color: #373737;
+  color: red; }
+
 body {
   background-color: #a6a6a6; }
 

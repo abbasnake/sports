@@ -3,18 +3,33 @@ import { $, $$, $$$ } from './_helpers.js'
 
 const registry = (dbData) => {
 
+  const addLiEventListeners = (el) => {
+
+    const saveEdit = (e) => { // fired on either the enter key or clicking away
+      e.target.setAttribute('contenteditable', 'false')
+      e.target.classList.remove('is-editable')
+      //need fetchAPI save here
+    }
+
+    el.addEventListener('dblclick', (e) => { // double click to edit field
+      e.target.setAttribute('contenteditable', 'true')
+      e.target.classList.add('is-editable')
+      e.target.focus()
+    })
+
+    el.addEventListener('keypress', (e) => { // when presing enter
+      if (e.keyCode === 13) {
+        saveEdit(e)
+      }
+    })
+
+    el.addEventListener('blur', saveEdit) // when clicking away
+  }
+
   const liTemplate = (data, parent) => {
     const li = $$$('li')
     li.classList.add('m-li', 's-li') // adding SMACSS classes
-
-    li.addEventListener('dblclick', (e) => {
-      e.target.setAttribute('contenteditable', 'true')
-    })
-
-    li.addEventListener('blur', (e) => { // when user moves away from editable field this is run
-      e.target.setAttribute('contenteditable', 'false')
-    })
-
+    addLiEventListeners(li)
     li.textContent = data
     parent.appendChild(li)
   }
