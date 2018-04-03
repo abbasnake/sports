@@ -3,7 +3,7 @@ const path             = require('path')              // path module
 const bodyParser       = require('body-parser')       // for json parsing                
 const expressSanitizer = require('express-sanitizer') // defense against injections 
 
-// require('./oldData.js')
+// require('./oldData.js') // inserting data to mLab
 
 const port = process.env.PORT || 3000 // set port
 const app  = express();               // initialize express app

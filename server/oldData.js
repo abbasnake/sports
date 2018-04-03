@@ -649,6 +649,336 @@ const insertOldData = () => {
       A: 'malka',
       R: '-'
     }
+  }),
+  Registry.create({
+    date: new Date('2018-04-01'),
+    score: {
+      A: 1,
+      R: 1
+    },
+    comments: {
+      A: 'malka',
+      R: 'Balance/Core'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-02'),
+    score: {
+      A: 1,
+      R: 2
+    },
+    comments: {
+      A: 'RR',
+      R: '10.5km 57min + RR'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-03'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-04'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-05'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-06'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-07'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-08'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-09'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-10'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-11'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-12'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-13'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-14'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-15'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-16'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-17'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-18'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-19'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-20'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-21'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-22'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-23'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-24'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-25'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-26'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-27'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-28'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-29'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
+  }),
+  Registry.create({
+    date: new Date('2018-04-30'),
+    score: {
+      A: 0,
+      R: 0
+    },
+    comments: {
+      A: '-',
+      R: '-'
+    }
   })
 }
 
