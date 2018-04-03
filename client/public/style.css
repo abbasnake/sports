@@ -80,7 +80,10 @@ h1, h2, h3, h4, h5, h6 {
   display: none; }
 
 .m-table-list:hover {
-  border: 2px solid red; }
+  border-bottom: 2px solid red; }
+
+.s-li:hover {
+  border-top: 2px solid red; }
 
 body {
   background-color: #a6a6a6; }

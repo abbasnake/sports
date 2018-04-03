@@ -5,7 +5,16 @@ const registry = (dbData) => {
 
   const liTemplate = (data, parent) => {
     const li = $$$('li')
-    li.classList.add('m-li') // adding SMACSS classes
+    li.classList.add('m-li', 's-li') // adding SMACSS classes
+
+    li.addEventListener('dblclick', (e) => {
+      e.target.setAttribute('contenteditable', 'true')
+    })
+
+    li.addEventListener('blur', (e) => { // when user moves away from editable field this is run
+      e.target.setAttribute('contenteditable', 'false')
+    })
+
     li.textContent = data
     parent.appendChild(li)
   }

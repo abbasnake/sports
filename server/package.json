@@ -4,7 +4,7 @@
   "description": "server side for sports app",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --watch ../client/public/bundle.js"
+    "start": "nodemon --watch ../client/public/bundle.js --watch ../client/public/style.css"
   },
   "author": "",
   "license": "ISC",
