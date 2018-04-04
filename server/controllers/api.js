@@ -19,7 +19,7 @@ router.post('/api/registry', (req, res) => { // POST ROUTE
     if (err) {
       console.log(err)
     } else {
-      res.send('success maybe') // need something useful to send back
+      res.json({'message': 'an edit was made:', 'edit': query}) // need something useful to send back
     }
   })
 })

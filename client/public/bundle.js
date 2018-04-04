@@ -30,6 +30,36 @@
     }
   };
 
+  const fetchAndInsertRegistry = (callback) => { // GET TODOS function
+    fetch('api/registry')                        // FetchAPI GET
+    .then(res => res.json())
+    .then(db => {
+      callback(db.data); // wrap data in necessary tags and insert to DOM
+    });
+  };
+
+  const updateRegistry = (e) => {
+    // e.preventDefault() // not necessary since not in a form
+
+    const id       = e.target.parentNode.dataset.id; // get relevant document id
+    const dataType = e.target.dataset.type;
+    const newValue = e.target.textContent;
+
+    fetch('api/registry', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({id: id, dataType: dataType, value: newValue})
+    })
+    .then(res => res.json())
+    .then(res => {
+      console.log(res.message);
+      console.log(res.edit);
+    });
+  };
+
   const registry = (dbData) => {
 
     const addLiEventListeners = (el) => {
@@ -57,7 +87,7 @@
 
     const liTemplate = (data, parent, dataType) => {
       const li = $$$('li');
-      li.classList.add('m-li', 's-li'); // adding SMACSS classes
+      li.classList.add('m-li', 's-li');       // adding SMACSS classes
       li.setAttribute('data-type', dataType); // adding dataType for reference later
       addLiEventListeners(li);
       li.textContent = data;
@@ -70,7 +100,7 @@
       for (let i = 0; i < data.length; i++) {
         const ul = $$$('ul');
         ul.classList.add('l-ul', 'm-table-list', 's-table-list'); // adding SMACSS classes
-        ul.setAttribute('data-id', data[i]._id); // adding the _id of mLab/mongodb documents for reference later
+        ul.setAttribute('data-id', data[i]._id);                  // adding the _id of mLab/mongodb documents for reference later
 
         const slicedDate = data[i].date.slice(0, 10); // to just see the year-month-day
 
@@ -87,34 +117,8 @@
     insertDataToDOM(dbData);
   };
 
-  const fetchAndInsertRegistry = () => { // GET TODOS function
-    fetch('api/registry')                // FetchAPI GET
-    .then(res => res.json())
-    .then(db => {
-      registry(db.data); // wrap data in necessary tags and insert to DOM
-    });
-  };
-
-  const updateRegistry = (e) => {
-    // e.preventDefault() // not necessary since not in a form
-
-    const id = e.target.parentNode.attributes['data-id'].value; // get relevant document id
-    const dataType = e.target.attributes['data-type'].value;
-    const newValue = e.target.textContent;
-
-    fetch('api/registry', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({id: id, dataType: dataType, value: newValue})
-    })
-    .then(res => console.log(res));
-  };
-
   runNavbar();
-  fetchAndInsertRegistry();
+  fetchAndInsertRegistry(registry);
   // runRegistry()
 
 }());

@@ -1,19 +1,18 @@
 import { $, $$, $$$ } from './_helpers.js'
-import { registry }   from './_registry.js'
 
-const fetchAndInsertRegistry = () => { // GET TODOS function
-  fetch('api/registry')                // FetchAPI GET
+const fetchAndInsertRegistry = (callback) => { // GET TODOS function
+  fetch('api/registry')                        // FetchAPI GET
   .then(res => res.json())
   .then(db => {
-    registry(db.data) // wrap data in necessary tags and insert to DOM
+    callback(db.data) // wrap data in necessary tags and insert to DOM
   })
 }
 
 const updateRegistry = (e) => {
   // e.preventDefault() // not necessary since not in a form
 
-  const id = e.target.parentNode.attributes['data-id'].value // get relevant document id
-  const dataType = e.target.attributes['data-type'].value
+  const id       = e.target.parentNode.dataset.id // get relevant document id
+  const dataType = e.target.dataset.type
   const newValue = e.target.textContent
 
   fetch('api/registry', {
@@ -24,7 +23,11 @@ const updateRegistry = (e) => {
     },
     body: JSON.stringify({id: id, dataType: dataType, value: newValue})
   })
-  .then(res => console.log(res))
+  .then(res => res.json())
+  .then(res => {
+    console.log(res.message)
+    console.log(res.edit)
+  })
 }
 
 export { fetchAndInsertRegistry, updateRegistry }

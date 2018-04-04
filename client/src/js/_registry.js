@@ -1,4 +1,4 @@
-import { $, $$, $$$ } from './_helpers.js'
+import { $, $$, $$$ }     from './_helpers.js'
 import { updateRegistry } from './_fetchAPI.js'
 
 const registry = (dbData) => {
@@ -28,7 +28,7 @@ const registry = (dbData) => {
 
   const liTemplate = (data, parent, dataType) => {
     const li = $$$('li')
-    li.classList.add('m-li', 's-li') // adding SMACSS classes
+    li.classList.add('m-li', 's-li')       // adding SMACSS classes
     li.setAttribute('data-type', dataType) // adding dataType for reference later
     addLiEventListeners(li)
     li.textContent = data
@@ -41,7 +41,7 @@ const registry = (dbData) => {
     for (let i = 0; i < data.length; i++) {
       const ul = $$$('ul')
       ul.classList.add('l-ul', 'm-table-list', 's-table-list') // adding SMACSS classes
-      ul.setAttribute('data-id', data[i]._id) // adding the _id of mLab/mongodb documents for reference later
+      ul.setAttribute('data-id', data[i]._id)                  // adding the _id of mLab/mongodb documents for reference later
 
       const slicedDate = data[i].date.slice(0, 10) // to just see the year-month-day
 
