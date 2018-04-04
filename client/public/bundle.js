@@ -67,12 +67,6 @@
     const insertDataToDOM = (data) => {
       const container = $('.js-registry');
 
-      const ulList = $$('.l-ul'); // this is super unelegant
-      for (let i = 1; i < ulList.length; i++) { // removing all uls befor adding new ones (refreshing basically), starts with index 1 to not remove the header
-        ulList[i].remove();
-        // console.log('removed a ul')
-      }
-
       for (let i = 0; i < data.length; i++) {
         const ul = $$$('ul');
         ul.classList.add('l-ul', 'm-table-list', 's-table-list'); // adding SMACSS classes
@@ -116,7 +110,7 @@
       },
       body: JSON.stringify({id: id, dataType: dataType, value: newValue})
     })
-    .then(fetchAndInsertRegistry());
+    .then(res => console.log(res));
   };
 
   runNavbar();

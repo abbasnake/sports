@@ -24,7 +24,7 @@ const updateRegistry = (e) => {
     },
     body: JSON.stringify({id: id, dataType: dataType, value: newValue})
   })
-  .then(fetchAndInsertRegistry())
+  .then(res => console.log(res))
 }
 
 export { fetchAndInsertRegistry, updateRegistry }
