@@ -1,10 +1,10 @@
-import { $, $$, $$$ } from './_helpers.js'
+import { $, $$, $$$ } from '../_helpers.js'
 
-const fetchAndInsertRegistry = (callback) => { // GET TODOS function
+const fetchAndSetupRegistry = (setup) => { // GET TODOS function
   fetch('api/registry')                        // FetchAPI GET
   .then(res => res.json())
   .then(db => {
-    callback(db.data) // wrap data in necessary tags and insert to DOM
+    setup(db.data) // wrap data in necessary tags and insert to DOM
   })
 }
 
@@ -30,4 +30,4 @@ const updateRegistry = (e) => {
   })
 }
 
-export { fetchAndInsertRegistry, updateRegistry }
+export { fetchAndSetupRegistry, updateRegistry }

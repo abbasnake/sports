@@ -1,7 +1,5 @@
 import { runNavbar }   from './_navbar.js'
-import { fetchAndInsertRegistry } from './_fetchAPI.js'
-import { registry }   from './_registry.js'
+import { runRegistry }   from './registry/_Registry.js'
 
 runNavbar()
-fetchAndInsertRegistry(registry)
-// runRegistry()
+runRegistry()

@@ -8,7 +8,7 @@
     "server:run": "live-server",
     "scss:watch": "sass --watch src/scss/main.scss:public/style.css",
     "js:bundle": "rollup src/js/app.js -o public/bundle.js -f iife",
-    "js:watch": "onchange src/js/*.js -- npm run js:bundle"
+    "js:watch": "onchange src/js/* -- npm run js:bundle"
   },
   "author": "",
   "license": "ISC",
